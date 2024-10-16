@@ -11,6 +11,7 @@
   - [Setting up Desktop1 / helpdesk](#setting-up-desktop1--helpdesk)
   - [Organizational Unit / Group Policies](#organizational-unit--group-policies)
   - [File Share](#file-share)
+  - [Remote Desktop](#remote-desktop)
 - [Notes](#notes)
 
 ## Overview
@@ -115,9 +116,26 @@ This homelab environment provides a practical setup for learning and experimenti
    
 7. Change maximum password age properties: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy <br />
    ![Change maximum password age properties](https://media.discordapp.net/attachments/1295155312151625748/1295500005037314201/image.png?ex=6710da26&is=670f88a6&hm=dde55f031d64fe92fac3f7fe9be6be290e9028900cd51efbdc065214fa11d925&=&format=webp&quality=lossless&width=822&height=671)
-   
+
 8. Replicate VM setup for Desktop 2 and log in to vchim: <br />
    ![Replicate VM setup for Desktop 2](https://media.discordapp.net/attachments/1295155312151625748/1295508069618286703/image.png?ex=6710e1a9&is=670f9029&hm=49ec46a79ad9f5bd4e810ad6fd25ce5a3a9f0638ab43e83e2a7ec7ff79d87f7c&=&format=webp&quality=lossless&width=821&height=671)
+
+9. Task Manager Policy: <br />
+   ![Task Manager Policy](https://media.discordapp.net/attachments/1295155312151625748/1295860616153661480/image.png?ex=6710d87e&is=670f86fe&hm=b0c0a5d10d4206442ae5b9774aa5ddecebaf0e3b86a74fd9165434c553c30c51&=&format=webp&quality=lossless&width=825&height=671)
+   
+10. Add vchim to users <br />
+   ![Add vchim to users](https://media.discordapp.net/attachments/1295155312151625748/1295861037362581524/image.png?ex=6710d8e3&is=670f8763&hm=f0be4418a94397e1caf325cd1d4cb8b15f98813a6755d20658dc557c068c677f&=&format=webp&quality=lossless&width=827&height=671)
+
+   
+11. User Configuration > Policies > Administrative Template > System > Ctrl + Alt + Del Options: <br />
+   ![Add vchim to users](https://media.discordapp.net/attachments/1295155312151625748/1295861977238863943/image.png?ex=6710d9c3&is=670f8843&hm=3c69e8ab19496d407d9f4079b1abfe35da627376aedb086c4aa7a091b548e910&=&format=webp&quality=lossless&width=820&height=671)
+
+   
+12. Move policy to HR and enforce <br />
+   ![Move policy to HR and enforce](https://media.discordapp.net/attachments/1295155312151625748/1295862174505504829/image.png?ex=6710d9f2&is=670f8872&hm=0cbbf546878ce9353c0b9e7485d3d8ecf6d678547fa2b339ee46f531ac2d5642&=&format=webp&quality=lossless&width=821&height=671)
+   
+13. Test policy: gpupdate /force <br />
+   ![Test policy](https://media.discordapp.net/attachments/1295155312151625748/1295863515617431593/image.png?ex=6710db32&is=670f89b2&hm=f66ece7efaccad05b6780e77cfbe39295f4c01514b72e25747d64aef3eefd66a&=&format=webp&quality=lossless&width=818&height=671)
    
 ### File Share
 
@@ -156,8 +174,43 @@ This homelab environment provides a practical setup for learning and experimenti
    
 12. Confirm mapped drives: <br />
    ![Confirm mapped drives](https://media.discordapp.net/attachments/1295155312151625748/1295519838235660328/image.png?ex=6710ec9f&is=670f9b1f&hm=190ea7d33ebe6999147db1333e75edba54a48b1fa0c569450b24ccfd1284a34a&=&format=webp&quality=lossless&width=821&height=671)
-   
 
+### Remote Desktop
+
+1. Enable remote desktop on user computer: <br />
+   ![Enable remote desktop on user computer](https://media.discordapp.net/attachments/1295155312151625748/1295843605797277817/image.png?ex=67117167&is=67101fe7&hm=a06ca318a523c9abdafb0886a8975eb1095c74eed3e4de4d448e1c1c9f3975d0&=&format=webp&quality=lossless&width=822&height=671)
+   
+2. Remote desktop from helpdesk/Desktop1 to Desktop2: <br />
+   ![Remote desktop from helpdesk/Desktop1 to Desktop2](https://media.discordapp.net/attachments/1295155312151625748/1295844351167037470/image.png?ex=67117218&is=67102098&hm=7f721e8ab8e9b7932863788ed75026a39622cbd33e2b669cdca7f1d5b2196471&=&format=webp&quality=lossless&width=810&height=671)
+   
+3. Example Use: Create new folders <br />
+   ![Example Use](https://media.discordapp.net/attachments/1295155312151625748/1295847144342945894/image.png?ex=671174b2&is=67102332&hm=ce665051110cce8c7b4c042366b4caa0b67a0a74febc8dc37ecd1c0837d5d1db&=&format=webp&quality=lossless&width=807&height=671)
+   
+4. Enable Remote Registry on both computers: Way to remote in without bugging user <br />
+   ![Enable Remote Registry on both computers](https://media.discordapp.net/attachments/1295155312151625748/1295849162843095164/image.png?ex=67117694&is=67102514&hm=a9373498124da8bb0bfb59228f3288f8a5b42c9ee42569e727e7940b652f864f&=&format=webp&quality=lossless&width=823&height=671)
+   
+5. Allow port 445 for Remote Registry: Windows Defender Firewall > Inbound Rule > New Rule > Port:445 <br />
+   ![Allow port 445 for Remote Registry](https://media.discordapp.net/attachments/1295155312151625748/1295851477197389896/image.png?ex=671178bb&is=6710273b&hm=71a9cb644c1c1278f44d5f3a62ad5950106e8ada3f40a28bb6aeb0b34e4a25f8&=&format=webp&quality=lossless&width=820&height=671)
+   
+6. Select Desktop2 in Registry Editor on Desktop1 <br />
+   ![Select Desktop2 in Registry Editor on Desktop1](https://media.discordapp.net/attachments/1295155312151625748/1295849502854610984/image.png?ex=671176e5&is=67102565&hm=d6df27018482d4019a79c0b23a99477f08168d2aa6d77ca614aa3962b75651fb&=&format=webp&quality=lossless&width=806&height=671)
+   
+7. Determine share drives: <br />
+   ![Determine share drives](https://media.discordapp.net/attachments/1295155312151625748/1295852349889445898/image.png?ex=6711798b&is=6710280b&hm=0533160d93f5c11b753d1dbd3c9277ae17f37b98e9c5e40b0da913a426b798c0&=&format=webp&quality=lossless&width=806&height=671)
+   
+8. Use c$ to access folders: \\desktop2\c$ <br />
+   ![Use c$ to access folders](https://media.discordapp.net/attachments/1295155312151625748/1295852582492704778/image.png?ex=671179c3&is=67102843&hm=5f20e4a3d99578c9a06850f77125f46e3fe082d9c0e4cb9b0e7828dd7bda3698&=&format=webp&quality=lossless&width=807&height=671)
+   
+9. Invite through file: Windows Remote Assistance \\desktop2\c$ <br />
+   ![Windows Remote Assistance](https://media.discordapp.net/attachments/1295155312151625748/1295853512160444467/image.png?ex=6710d1e1&is=670f8061&hm=3d1b78449a23820a6904816f1191c6ebe21dcfe12a6d167bc7b737c6600075c2&=&format=webp&quality=lossless&width=820&height=671)
+   
+10. Use c$ to access the invitation file: <br />
+   ![Use c$ to access the invitation file](https://media.discordapp.net/attachments/1295155312151625748/1295854288152694845/image.png?ex=6710d29a&is=670f811a&hm=ad212dc3ee39e2f2fdf8ea03aafd3111380fc577dae6bb73a0668425f860bbb9&=&format=webp&quality=lossless&width=810&height=671)
+   
+11. Windows Remote Assistance: <br />
+   ![Windows Remote Assistance](https://media.discordapp.net/attachments/1295155312151625748/1295855171955331175/image.png?ex=6710d36c&is=670f81ec&hm=5b7eb5a3cf303c52f769fc28ef5a8c7af0e380c6a05606948bf9749546034d62&=&format=webp&quality=lossless&width=1440&height=647)
+   
+   
 
 ## Notes
 CMD Commands
