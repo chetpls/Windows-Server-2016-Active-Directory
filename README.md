@@ -9,6 +9,8 @@
 - [Program Walk-through](#program-walk-through)
   - [Windows Server 2016 / Active Directory Installation](#windows-server-2016--active-directory-installation)
   - [Setting up Desktop1 / helpdesk](#setting-up-desktop1--helpdesk)
+  - [Organizational Unit / Group Policies](#organizational-unit--group-policies)
+  - [File Share](#file-share)
 - [Notes](#notes)
 
 ## Overview
@@ -44,33 +46,127 @@ This homelab environment provides a practical setup for learning and experimenti
 
 ### Windows Server 2016 / Active Directory Installation
 
-1. Install Windows Server 2016:
+1. Install Windows Server 2016: <br />
    ![Install Windows Server 2016](https://media.discordapp.net/attachments/1295155312151625748/1295155496633897090/image.png?ex=6710eacd&is=670f994d&hm=73f21d19f9176705ec4b78a6d5764cfb3486f918b2c747b8083d75cc4deb2667&=&format=webp&quality=lossless&width=820&height=671)
 
-2. Change computer name:
+2. Change computer name: <br />
    ![Change computer name](https://media.discordapp.net/attachments/1295155312151625748/1295165229352878110/image.png?ex=6710f3dd&is=670fa25d&hm=b07902a342f7d4614dbc5d1821013f27a5bb1dad2c05b3123f93599d6e5596cc&=&format=webp&quality=lossless&width=818&height=671)
 
-3. Install Active Directory Domain Services:
+3. Install Active Directory Domain Services: <br />
    ![Install Active Directory Domain Services](https://media.discordapp.net/attachments/1295155312151625748/1295166707895107674/image.png?ex=6710f53e&is=670fa3be&hm=4c1e7b7631f85e7ecff9e228006fd00d00f3991d98ca23947a2d91dffdf22e02&=&format=webp&quality=lossless&width=825&height=671)
 
-4. Deploy a new forest:
+4. Deploy a new forest: <br />
    ![Deploy a new forest](https://media.discordapp.net/attachments/1295155312151625748/1295166791776993343/image.png?ex=6710f552&is=670fa3d2&hm=c5f49f167c4fa841527aece14e02e5a58f865ad5f398c7034fcfca609c8f48ab&=&format=webp&quality=lossless&width=821&height=671)
 
-5. Enable Recycle Bin:
+5. Enable Recycle Bin: <br />
    ![Enable Recycle Bin](https://media.discordapp.net/attachments/1295155312151625748/1295172454397902882/image.png?ex=6710fa98&is=670fa918&hm=03e20a2cd68ab9d74ce3893656b7ca78ccd5cbaaa1608203a49868e75fada340&=&format=webp&quality=lossless&width=822&height=671)
 
-6. Setup static IP for server:
+6. Setup static IP for server: <br />
    ![Setup static IP for server](https://media.discordapp.net/attachments/1295155312151625748/1295463187969474663/image.png?ex=6711609c&is=67100f1c&hm=90d82b60302b9a9815e6c4861089c4afa669972ee709872427e293acf26e6c6e&=&format=webp&quality=lossless&width=823&height=671)
+   
+7. Change VM network settings: <br />
+   ![Change VM network settings](https://media.discordapp.net/attachments/1295155312151625748/1295463491292893265/image.png?ex=671160e4&is=67100f64&hm=2c1dd7616e4ca406786e6a5ff5c18f1d351d5ce532cc181de4a51b3cfedd4f30&=&format=webp&quality=lossless&width=822&height=671)
 
 ### Setting up Desktop1 / helpdesk
 
-1. Copy Administrator user for new user "helpdesk":
+1. Copy Administrator user for new user "helpdesk": <br />
    ![Copy Administrator user](https://media.discordapp.net/attachments/1295155312151625748/1295172858519224421/image.png?ex=6710faf8&is=670fa978&hm=fed81311117c258be7d1c1f55929e70b30017b8c53e511de978b83475e450617&=&format=webp&quality=lossless&width=820&height=671)
 
-2. Install Windows 10 Pro:
+2. Install Windows 10 Pro: <br />
    ![Install Windows 10 Pro](https://media.discordapp.net/attachments/1295155312151625748/1295462100076072970/image.png?ex=67115f99&is=67100e19&hm=0b7bf81a8e22daf897d14f40f1fd30f5b5ff5007f08b56404d67c43a936aaee5&=&format=webp&quality=lossless&width=822&height=671)
+   
+3. Enable Administrator account and delete the User account: <br />
+   ![Enable Administrator account and delete the User account](https://media.discordapp.net/attachments/1295155312151625748/1295471649671483485/image.png?ex=6711687d&is=671016fd&hm=eab55b85c7ab950833065227e1f8cb625618a621d62656bb8c060848f591fc6d&=&format=webp&quality=lossless&width=820&height=671)
+   
+4. Install RSAT tools: Open Settings > System > Optional Features > Add a feature <br />
+   ![Install RSAT tools](https://media.discordapp.net/attachments/1295155312151625748/1295475573044285442/image.png?ex=67116c25&is=67101aa5&hm=9019e31d29e09429fbdc40192ce88b79f7af1ffc83a0aadf0e676c6d72d8a6fa&=&format=webp&quality=lossless&width=821&height=671)
+   
+5. Setup static ip and VM network settings <br />
+   ![Setup static ip and VM network settings](https://media.discordapp.net/attachments/1295155312151625748/1295478494767218738/image.png?ex=67116edd&is=67101d5d&hm=1d1b55d443521f1cfa217782781ebd70ac7088440a38217f62e7a6eb0419a08a&=&format=webp&quality=lossless&width=821&height=671)
+   
+6. Change computer name and join domain <br />
+   ![Change computer name and join domain](https://media.discordapp.net/attachments/1295155312151625748/1295479935422562324/image.png?ex=67117035&is=67101eb5&hm=f308e2df7314ddc5d792ba2c3217cece5aea96bfce008ef5fc8ab581e83001da&=&format=webp&quality=lossless&width=822&height=671)
+   
+7. Log into domain <br />
+   ![Log into domain](https://media.discordapp.net/attachments/1295155312151625748/1295480227878670409/image.png?ex=6711707b&is=67101efb&hm=85c06dd45f7893ca721c11b85d53e6c27e0025ac370eca21c055bb3d4983568d&=&format=webp&quality=lossless&width=820&height=671)
+   
+6. Verify computer is in domain <br />
+   ![Verify computer is in domain](https://media.discordapp.net/attachments/1295155312151625748/1295480583480279101/image.png?ex=671170cf&is=67101f4f&hm=78828daa6af216e45409beedd0782590c5ef8456891cd62c50cc7d7dacacba8e&=&format=webp&quality=lossless&width=820&height=671)
+
+### Organizational Unit / Group Policies
+
+1. Create HR OU: <br />
+   ![Create HR OU](https://media.discordapp.net/attachments/1295155312151625748/1295484350783033445/image.png?ex=67117452&is=671022d2&hm=0cb441f587ba24f43767a401f8544772e6381b3706e56ace8ce8eaff844bbf42&=&format=webp&quality=lossless&width=823&height=671)
+   
+2. Create vchim user: <br />
+   ![Create vchim user](https://media.discordapp.net/attachments/1295155312151625748/1295484552336244768/image.png?ex=67117482&is=67102302&hm=d7c8bb53d3b7f888dc14c615d882b353f25cba0c1f6d06aa716f74a861572d94&=&format=webp&quality=lossless&width=820&height=671)
+   
+3. Move vchim to HR: <br />
+   ![Move vchim to HR](https://media.discordapp.net/attachments/1295155312151625748/1295484764983132160/image.png?ex=671174b4&is=67102334&hm=77e6426fb79a4bfe3b4d1760ca0f0d7d1e2ac20b030fbcf0c49a4b2099d19501&=&format=webp&quality=lossless&width=818&height=671)
+   
+4. Create IT OU: <br />
+   ![Create IT OU](https://media.discordapp.net/attachments/1295155312151625748/1295484853281755196/image.png?ex=671174c9&is=67102349&hm=e5b2d69ce16594f5aa4b5148c78664e05893ccea19616d71a20a01672ac58889&=&format=webp&quality=lossless&width=818&height=671)
+   
+5. Move helpdesk to IT: <br />
+   ![Move helpdesk to IT](https://media.discordapp.net/attachments/1295155312151625748/1295484942104395877/image.png?ex=671174df&is=6710235f&hm=44879f2bcc1ccc1564654716b594bcd2f7a750438d47ed107fc57db1492cb2fe&=&format=webp&quality=lossless&width=816&height=671)
+   
+6. Add Account Lockout policy to Default Domain Policy: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout <br />
+   ![Add Account Lockout policy to Default Domain Policy](https://media.discordapp.net/attachments/1295155312151625748/1295499848661078026/image.png?ex=6710da01&is=670f8881&hm=68a0fec47f1dd309cc036eca25592bddafefb7db28124d8585c2dca4ef9dd7e6&=&format=webp&quality=lossless&width=823&height=671)
+   
+7. Change maximum password age properties: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy <br />
+   ![Change maximum password age properties](https://media.discordapp.net/attachments/1295155312151625748/1295500005037314201/image.png?ex=6710da26&is=670f88a6&hm=dde55f031d64fe92fac3f7fe9be6be290e9028900cd51efbdc065214fa11d925&=&format=webp&quality=lossless&width=822&height=671)
+   
+8. Replicate VM setup for Desktop 2 and log in to vchim: <br />
+   ![Replicate VM setup for Desktop 2](https://media.discordapp.net/attachments/1295155312151625748/1295508069618286703/image.png?ex=6710e1a9&is=670f9029&hm=49ec46a79ad9f5bd4e810ad6fd25ce5a3a9f0638ab43e83e2a7ec7ff79d87f7c&=&format=webp&quality=lossless&width=821&height=671)
+   
+### File Share
+
+1. Create HR Share and Personal Share: <br />
+   ![Create HR Share and Personal Share](https://media.discordapp.net/attachments/1295155312151625748/1295511888192340108/image.png?ex=6710e537&is=670f93b7&hm=3d6e11d5911bd6a878cd27f3491c18b7edd79550270980200be305acaba807ba&=&format=webp&quality=lossless&width=821&height=671)
+   
+2. Create HR Security Group: <br />
+   ![Create HR Security Group](https://media.discordapp.net/attachments/1295155312151625748/1295512688562143323/image.png?ex=6710e5f6&is=670f9476&hm=1d2436104b6e2ec1fc15fbe71db989ed520fade95c1b9e2286dbd6424d0884c2&=&format=webp&quality=lossless&width=820&height=671)
+   
+3. Add helpdesk to managed by: <br />
+   ![Add helpdesk to managed by](https://media.discordapp.net/attachments/1295155312151625748/1295513063704891502/image.png?ex=6710e64f&is=670f94cf&hm=413de668d42adada925c4b6a10241e557e2360a45e6000b6bda64031e5498d7f&=&format=webp&quality=lossless&width=821&height=671)
+   
+4. Do the same for Personal: <br />
+   ![Do the same for Personal](https://media.discordapp.net/attachments/1295155312151625748/1295513341376200846/image.png?ex=6710e692&is=670f9512&hm=daa8c7fca878f56ac796480e6f4b92469c60559d7b5bccf551b87fcae5f49bab&=&format=webp&quality=lossless&width=820&height=671)
+   
+5. Add vchim as a member to both #HR and #Personal: <br />
+   ![Add vchim as a member to both #HR and #Personal](https://media.discordapp.net/attachments/1295155312151625748/1295514053590126593/image.png?ex=6710e73b&is=670f95bb&hm=8946e6b6c511aba02ce4895d67a7dd023961a81905672a49fb2e18f1daceff7f&=&format=webp&quality=lossless&width=821&height=671)
+
+6. Disable inheritance, remove users, add helpdesk and #Personal: <br />
+   ![Disable inheritance, remove users, add helpdesk and #Personal](https://media.discordapp.net/attachments/1295155312151625748/1295515217727455283/image.png?ex=6710e851&is=670f96d1&hm=30ca90e88ecaa88f64c28efb4be92ace2ee93ba3f50d7de077725f6a819dee25&=&format=webp&quality=lossless&width=823&height=671)
+
+7. Share the folder with Read/Write: <br />
+   ![Share the folder with Read/Write](https://media.discordapp.net/attachments/1295155312151625748/1295515543826075680/image.png?ex=6710e89f&is=670f971f&hm=f7fc7989881d3408184e98e28ebbdcaaec4d7b9a73d0ddf68dbfc45b5e43124c&=&format=webp&quality=lossless&width=821&height=671)
+   
+8. Repeat for HR: <br />
+   ![Repeat for HR](https://media.discordapp.net/attachments/1295155312151625748/1295516318086332499/image.png?ex=6710e957&is=670f97d7&hm=8e98ab0fbda996763d67265a4be88bd0e80900f528237ad78404c4a5a3902102&=&format=webp&quality=lossless&width=818&height=671)
+   
+9. Map drives on user computer : <br />
+   ![Map drives on user computer](https://media.discordapp.net/attachments/1295155312151625748/1295517199947141150/image.png?ex=6710ea2a&is=670f98aa&hm=669b7db3f584a012662b616cc30a4b43ba563e644a7739ea310e673b6cdf886f&=&format=webp&quality=lossless&width=817&height=671)
+   
+10. Confirm mapped drives: <br />
+   ![Confirm mapped drives](https://media.discordapp.net/attachments/1295155312151625748/1295518348909482074/image.png?ex=6710eb3b&is=670f99bb&hm=ad68ce85df30b58805812194163652cf57770770393153bc1ee32c8caeb3f428&=&format=webp&quality=lossless&width=822&height=671)
+   
+11. Map drives through Active Directory: <br />
+   ![Map drives through Active Directory](https://media.discordapp.net/attachments/1295155312151625748/1295518846911778907/image.png?ex=6710ebb2&is=670f9a32&hm=3c7a4b9152630a5086bfdedc3204b5bfebd531e06370e05d26d30ff651fb3b1e&=&format=webp&quality=lossless&width=823&height=671)
+   
+12. Confirm mapped drives: <br />
+   ![Confirm mapped drives](https://media.discordapp.net/attachments/1295155312151625748/1295519838235660328/image.png?ex=6710ec9f&is=670f9b1f&hm=190ea7d33ebe6999147db1333e75edba54a48b1fa0c569450b24ccfd1284a34a&=&format=webp&quality=lossless&width=821&height=671)
+   
+
 
 ## Notes
+CMD Commands
+ipconfig - /all
+net use - displays shared drives
+net user hepdesk /domain - displays group memberships, password information for user "helpdesk"
+ping - -t
+
+
 
 [Add any additional notes, challenges faced, or lessons learned during the setup]
 
