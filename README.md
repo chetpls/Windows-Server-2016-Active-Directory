@@ -12,6 +12,7 @@
   - [Organizational Unit / Group Policies](#organizational-unit--group-policies)
   - [File Share](#file-share)
   - [Remote Desktop](#remote-desktop)
+  - [PDQ Deploy/Inventory](#pdq-deploy-inventory)
 - [Notes](#notes)
 
 ## Overview
@@ -210,6 +211,48 @@ This homelab environment provides a practical setup for learning and experimenti
 11. Windows Remote Assistance: <br />
    ![Windows Remote Assistance](https://media.discordapp.net/attachments/1295155312151625748/1295855171955331175/image.png?ex=6710d36c&is=670f81ec&hm=5b7eb5a3cf303c52f769fc28ef5a8c7af0e380c6a05606948bf9749546034d62&=&format=webp&quality=lossless&width=1440&height=647)
    
+### PDQ Deployment/Inventory
+
+1. Install Virtualbox Guest Additions: <br />
+   ![Install Virtualbox Guest Additions](https://media.discordapp.net/attachments/1295155312151625748/1295867221129695322/image.png?ex=6710dea5&is=670f8d25&hm=67c93240a2410296b7553661b2135e599f083d91e36f5bc08d99f0fb8e1b2bbc&=&format=webp&quality=lossless&width=820&height=671)
+   
+2. Link shared folder: <br />
+   ![Link shared folder](https://media.discordapp.net/attachments/1295155312151625748/1295868138893742090/image.png?ex=6710df80&is=670f8e00&hm=ca110a8844646219b1ee0ec70f373a40b082865d8f6b1790958c52c9bc2a8d79&=&format=webp&quality=lossless&width=821&height=671)
+   
+3. Grab PDQ from the shared folder: <br />
+   ![Grab PDQ from the shared folder](https://media.discordapp.net/attachments/1295155312151625748/1295868297249820684/image.png?ex=6710dfa6&is=670f8e26&hm=cb0b154f1f62f3e578299bde63f56460a7e6406811cce5b2b1222171e0a20838&=&format=webp&quality=lossless&width=818&height=671)
+   
+4. Reset network settings to internet access:  <br />
+   ![Reset network settings to internet access](https://media.discordapp.net/attachments/1295155312151625748/1295868867939401790/image.png?ex=6710e02e&is=670f8eae&hm=1cff3391e44b5a3bbcf87d18cf4b06765868d0cd6373336950599c30b812c9c4&=&format=webp&quality=lossless&width=818&height=671)
+   
+5. Install .NET Framework: Requires internet *Make sure to revert the netowrk settings <br />
+   ![Install .NET Framework](https://media.discordapp.net/attachments/1295155312151625748/1295869124798316574/image.png?ex=6710e06b&is=670f8eeb&hm=b3417986304daa378bef33e398ec7f091ccc13b74fac5ea6a7f2a6941468747f&=&format=webp&quality=lossless&width=820&height=671)
+   
+6. Install PDQ Deploy: <br />
+   ![Install PDQ Deploy](https://media.discordapp.net/attachments/1295155312151625748/1295870051739631686/image.png?ex=6710e148&is=670f8fc8&hm=1de50156fdb00d308011adba92377b0bbfdea9b3424f4c0a9616c24e22764bb3&=&format=webp&quality=lossless&width=820&height=671)
+   
+7. Download Firefox package and deploy: Deploy Once > Choose Target > Active Directory > Computers > SERVER2016 <br />
+   ![Download Firefox package and deploy](https://media.discordapp.net/attachments/1295155312151625748/1295870051739631686/image.png?ex=6710e148&is=670f8fc8&hm=1de50156fdb00d308011adba92377b0bbfdea9b3424f4c0a9616c24e22764bb3&=&format=webp&quality=lossless&width=820&height=671)
+   
+8. Confirm deployment: <br />
+   ![Confirm deployment](https://media.discordapp.net/attachments/1295155312151625748/1295877058408484924/image.png?ex=6710e7ce&is=670f964e&hm=17c520b1b72b26dd47041a28525c2f404901e6132697e47db4c80145276d9074&=&format=webp&quality=lossless&width=821&height=671)
+ 
+9. Install PDQ Inventory: <br />
+   ![Install PDQ Inventory](https://media.discordapp.net/attachments/1295155312151625748/1295880901103976478/image.png?ex=6710eb63&is=670f99e3&hm=a4fac77c41552def21157a030dbdae30e6f769da7fda25e023d101ab12f26990&=&format=webp&quality=lossless&width=821&height=671)
+ 
+10. Add desktop2 to PDQ Inventory: <br />
+   ![Add desktop2 to PDQ Inventory](https://media.discordapp.net/attachments/1295155312151625748/1295883111560642611/image.png?ex=6710ed72&is=670f9bf2&hm=ac3c476050dad6f8eb636f488ac93c77ce8276975e3b9bf551cd124796c0dd93&=&format=webp&quality=lossless&width=818&height=671)
+ 
+11. Example Use: Run report on shared folders <br />
+   ![Example Use](https://media.discordapp.net/attachments/1295155312151625748/1295883717213945929/image.png?ex=6710ee02&is=670f9c82&hm=9336beb2573128995c8e07cb302734c85709168614fe4d8ead6d8b28fe7b7018&=&format=webp&quality=lossless&width=823&height=671)
+ 
+12. Example Use: Check computer system information <br />
+   ![Example Use](https://media.discordapp.net/attachments/1295155312151625748/1295883797513900052/image.png?ex=6710ee15&is=670f9c95&hm=81c7b9d901145c333bef978ff043bce27e78dab017f1e104074a4c3b8ff7f59f&=&format=webp&quality=lossless&width=818&height=671)
+ 
+13. Example Use: Check installed applications <br />
+   ![Example Use](https://media.discordapp.net/attachments/1295155312151625748/1295883852249694230/image.png?ex=6710ee22&is=670f9ca2&hm=d4a01d5a3e2e0b337f9f2c244457fd904ff6835afa2b3784779cf182bed32608&=&format=webp&quality=lossless&width=823&height=671)
+ 
+
    
 
 ## Notes
