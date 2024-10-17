@@ -44,8 +44,10 @@ This homelab environment provides a practical setup for learning and experimenti
 1. Installed and set up VirtualBox, Windows Server 2016, linked clones, and RDP
 2. Added Windows 10 client machines to Windows Server 2016 domain
 3. Created and modified Active Directory template user accounts to hold various properties
-4. Configured Windows Server 2016 domain settings, server name, TCP/IP settings, and remote desktop
+4. Configured domain settings, TCP/IP, file sharing, and network printing services.
 5. Created and linked group policy objects in Active Directory
+6. Set up PDQ Deploy for automated software deployment and PDQ Inventory for comprehensive asset management.
+7. Implemented security measures such as Delegate Control and account lockout policies.
 
 ## Program Walk-through
 
