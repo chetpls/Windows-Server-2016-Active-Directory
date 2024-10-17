@@ -12,7 +12,7 @@
   - [Organizational Unit / Group Policies](#organizational-unit--group-policies)
   - [File Share](#file-share)
   - [Remote Desktop](#remote-desktop)
-  - [PDQ Deploy/Inventory](#pdq-deploy-inventory)
+  - [PDQ Deploy / Inventory](#pdq-deploy--inventory)
   - [Printer Setup](#printer-setup)
   - [Spiceworks](#spiceworks)
   - [Delegate Control / Account Locked Out](#delegate-control--account-locked-out)
@@ -214,7 +214,7 @@ This homelab environment provides a practical setup for learning and experimenti
 11. Windows Remote Assistance: <br />
    ![Windows Remote Assistance](https://media.discordapp.net/attachments/1295155312151625748/1295855171955331175/image.png?ex=6710d36c&is=670f81ec&hm=5b7eb5a3cf303c52f769fc28ef5a8c7af0e380c6a05606948bf9749546034d62&=&format=webp&quality=lossless&width=1440&height=647)
    
-### PDQ Deploy/Inventory
+### PDQ Deploy / Inventory
 
 1. Install Virtualbox Guest Additions: <br />
    ![Install Virtualbox Guest Additions](https://media.discordapp.net/attachments/1295155312151625748/1295867221129695322/image.png?ex=6710dea5&is=670f8d25&hm=67c93240a2410296b7553661b2135e599f083d91e36f5bc08d99f0fb8e1b2bbc&=&format=webp&quality=lossless&width=820&height=671)
