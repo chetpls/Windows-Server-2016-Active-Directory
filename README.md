@@ -13,6 +13,9 @@
   - [File Share](#file-share)
   - [Remote Desktop](#remote-desktop)
   - [PDQ Deploy/Inventory](#pdq-deploy-inventory)
+  - [Printer Setup](#printer-setup)
+  - [Spiceworks](#spiceworks)
+  - [Delegate Control / Account Locked Out](#delegate-control--account-locked-out)
 - [Notes](#notes)
 
 ## Overview
@@ -202,7 +205,7 @@ This homelab environment provides a practical setup for learning and experimenti
 8. Use c$ to access folders: \\desktop2\c$ <br />
    ![Use c$ to access folders](https://media.discordapp.net/attachments/1295155312151625748/1295852582492704778/image.png?ex=671179c3&is=67102843&hm=5f20e4a3d99578c9a06850f77125f46e3fe082d9c0e4cb9b0e7828dd7bda3698&=&format=webp&quality=lossless&width=807&height=671)
    
-9. Invite through file: Windows Remote Assistance \\desktop2\c$ <br />
+9. Invite through file: Windows Remote Assistance <br />
    ![Windows Remote Assistance](https://media.discordapp.net/attachments/1295155312151625748/1295853512160444467/image.png?ex=6710d1e1&is=670f8061&hm=3d1b78449a23820a6904816f1191c6ebe21dcfe12a6d167bc7b737c6600075c2&=&format=webp&quality=lossless&width=820&height=671)
    
 10. Use c$ to access the invitation file: <br />
@@ -211,7 +214,7 @@ This homelab environment provides a practical setup for learning and experimenti
 11. Windows Remote Assistance: <br />
    ![Windows Remote Assistance](https://media.discordapp.net/attachments/1295155312151625748/1295855171955331175/image.png?ex=6710d36c&is=670f81ec&hm=5b7eb5a3cf303c52f769fc28ef5a8c7af0e380c6a05606948bf9749546034d62&=&format=webp&quality=lossless&width=1440&height=647)
    
-### PDQ Deployment/Inventory
+### PDQ Deploy/Inventory
 
 1. Install Virtualbox Guest Additions: <br />
    ![Install Virtualbox Guest Additions](https://media.discordapp.net/attachments/1295155312151625748/1295867221129695322/image.png?ex=6710dea5&is=670f8d25&hm=67c93240a2410296b7553661b2135e599f083d91e36f5bc08d99f0fb8e1b2bbc&=&format=webp&quality=lossless&width=820&height=671)
@@ -252,8 +255,72 @@ This homelab environment provides a practical setup for learning and experimenti
 13. Example Use: Check installed applications <br />
    ![Example Use](https://media.discordapp.net/attachments/1295155312151625748/1295883852249694230/image.png?ex=6710ee22&is=670f9ca2&hm=d4a01d5a3e2e0b337f9f2c244457fd904ff6835afa2b3784779cf182bed32608&=&format=webp&quality=lossless&width=823&height=671)
  
+### Printer Setup
+
+1. Install Printer Server: <br />
+   ![Install Printer Server](https://media.discordapp.net/attachments/1295155312151625748/1295885525411958784/image.png?ex=6710efb1&is=670f9e31&hm=315c599953267923a11297f479cb9ae3277214654ebdb74141adb341c9343bbb&=&format=webp&quality=lossless&width=817&height=671)
+   
+2. Add new printer: <br />
+   ![Add new printer](https://media.discordapp.net/attachments/1295155312151625748/1295887306779267212/image.png?ex=6710f15a&is=670f9fda&hm=a349840b5c58e5aa2d4671ecc12ae67e6a6d2b3ae1664ff6c09c705b1c2c5229&=&format=webp&quality=lossless&width=825&height=671)
+   
+3. Add printer using existing port: <br />
+   ![Add printer using existing port](https://media.discordapp.net/attachments/1295155312151625748/1295887307001299006/image.png?ex=6710f15a&is=670f9fda&hm=5f9288e29df0ac68ca2a7ce4f8fb8c98812a11f2aedf6ba1cae6ebe4408d31cf&=&format=webp&quality=lossless&width=821&height=671)
+   
+4. Install HP printer: <br />
+   ![Install HP printer](https://media.discordapp.net/attachments/1295155312151625748/1295887307211018331/image.png?ex=6710f15a&is=670f9fda&hm=0275694a9192bf60f4a50579b00e9f1f1ef3a92aa162c4aceffb26bbf909f23e&=&format=webp&quality=lossless&width=823&height=671)
+   
+5. Share printer: <br />
+   ![Share printer](https://media.discordapp.net/attachments/1295155312151625748/1295887320096051240/image.png?ex=6710f15d&is=670f9fdd&hm=cdaa8e64a6e3c45298560cad8cd90ca3983a1c2dcd79f78105917f3381520812&=&format=webp&quality=lossless&width=821&height=671)
+   
+6. Add #HR group to printer: <br />
+   ![Add #HR group to printer](https://media.discordapp.net/attachments/1295155312151625748/1295887508680478720/image.png?ex=6710f18a&is=670fa00a&hm=fc6affaaf65c083f91736e228660e558c30d07772f032776955cdafa0c6cc1a7&=&format=webp&quality=lossless&width=822&height=671)
+   
+7. Search for printer on desktop2: <br />
+   ![Search for printer on desktop2](https://media.discordapp.net/attachments/1295155312151625748/1295888071333773353/image.png?ex=6710f210&is=670fa090&hm=0d0d330a23f8daddf69566f538219c8dadf1c7b7750c7a8e1144ddf1cf59f695&=&format=webp&quality=lossless&width=823&height=671)
+
+8. Confirm shared printer: <br />
+  ![Confirm shared printer](https://media.discordapp.net/attachments/1295155312151625748/1295888195392634940/image.png?ex=6710f22e&is=670fa0ae&hm=b259fc70c2fd676475b0d8ab584281b8d0c9cc6210c5a3a279ddd774d6bdd058&=&format=webp&quality=lossless&width=817&height=671)
+   
+### Spiceworks
+
+1. Create a remote session: <br />
+  ![Create a remote session](https://media.discordapp.net/attachments/1295155312151625748/1295891703118696508/image.png?ex=6710f572&is=670fa3f2&hm=ed2c4ab726f42af5e44dc6f5e04225455cb85ca1aa04e671608b7f48956a45bb&=&format=webp&quality=lossless&width=1406&height=671)
+   
+2. Join remote session: *Change network settings to allow internet access <br />
+  ![Create a remote session](https://media.discordapp.net/attachments/1295155312151625748/1295892213598781533/image.png?ex=6710f5ec&is=670fa46c&hm=4c39a684a22d1fcee9abb3b517615ea444d5dca3dc0061c306678b305d4a17cf&=&format=webp&quality=lossless&width=823&height=671)
 
    
+3. Download and install application to use remote help: <br />
+  ![Download and install application to use remote help](https://media.discordapp.net/attachments/1295155312151625748/1295893310858199060/image.png?ex=6710f6f1&is=670fa571&hm=90dae9051cac18abd22625e18d0c83b127269939d1d4c6a3980b586e7a2367f7&=&format=webp&quality=lossless&width=1393&height=671)
+
+### Delegate Control / Account Locked Out
+      
+1. Create new OU and User: <br />
+  ![Create new OU and User](https://media.discordapp.net/attachments/1295155312151625748/1295896695401480272/image.png?ex=6710fa18&is=670fa898&hm=c15d58fc8f25f725dba6a60df1ab17250cc0ccc2071a7b39c0999f3a11859701&=&format=webp&quality=lossless&width=822&height=671)
+      
+2. Delegate control for password resets: <br />
+  ![Delegate control for password resets](https://media.discordapp.net/attachments/1295155312151625748/1295896995583492137/image.png?ex=6710fa60&is=670fa8e0&hm=13e7e5da9823dd2c6d76644896433771a8636aef7a7489860def74d176a342e5&=&format=webp&quality=lossless&width=820&height=671)
+      
+3. Login to jdoe: <br />
+  ![Login to jdoe](https://media.discordapp.net/attachments/1295155312151625748/1295897232696016978/image.png?ex=6710fa98&is=670fa918&hm=1ee7120cdba505c9b163250a2d666d231b29ab37c9c104f0d4fd2da1dfbc4631&=&format=webp&quality=lossless&width=822&height=671)
+
+4. Verify account permissions: <br />
+  ![Verify account permissions](https://media.discordapp.net/attachments/1295155312151625748/1295897968322416670/image.png?ex=6710fb48&is=670fa9c8&hm=d5170cd21badb896edebf35d7d9fc5e694ab4d453c3b3bc2010a6051296aa7be&=&format=webp&quality=lossless&width=825&height=671)
+
+5. Install ALTools: <br />
+  ![Install ALTools](https://media.discordapp.net/attachments/1295155312151625748/1295898520628367422/image.png?ex=6710fbcb&is=670faa4b&hm=b47a341d5c355bbfe73ccbcf62bad7c00efa9f12dc46a7011b16faa9c5176c0c&=&format=webp&quality=lossless&width=823&height=671)
+
+6. Get locked out of jdoe: <br />
+  ![Get locked out of jdoe](https://media.discordapp.net/attachments/1295155312151625748/1295898620079640577/image.png?ex=6710fbe3&is=670faa63&hm=3205c0b976e16b0e9f090f8e424a7cf2ab3705157294b1d9e1351c1f1d91e0eb&=&format=webp&quality=lossless&width=815&height=671)
+
+7. Launch lockout status: Select target jdoe <br />
+  ![Launch lockout status](https://media.discordapp.net/attachments/1295155312151625748/1295898917426430053/image.png?ex=6710fc2a&is=670faaaa&hm=be9f76628bd0455e6ad7a2bdd5886a5deda7fe4b1a86e02d82a0034aac651acf&=&format=webp&quality=lossless&width=823&height=671)
+
+8. View information on passwords and lockout <br />
+  ![View information on passwords and lockout](https://media.discordapp.net/attachments/1295155312151625748/1295899089636167721/image.png?ex=6710fc53&is=670faad3&hm=c51ee319fc7db42aeb48db97083a406648950bc18c3146680b83ee07c06abce3&=&format=webp&quality=lossless&width=818&height=671)
+
+9. Unlock account <br />
+  ![Unlock account](https://media.discordapp.net/attachments/1295155312151625748/1295899325859368960/image.png?ex=6710fc8b&is=670fab0b&hm=cccd6c3d0df9c5ed8b2dc81b298f20fc684e4f041cb7f6c9a99a1b7b32ea894e&=&format=webp&quality=lossless&width=823&height=671)
 
 ## Notes
 CMD Commands
@@ -261,8 +328,4 @@ ipconfig - /all
 net use - displays shared drives
 net user hepdesk /domain - displays group memberships, password information for user "helpdesk"
 ping - -t
-
-
-
-[Add any additional notes, challenges faced, or lessons learned during the setup]
 
